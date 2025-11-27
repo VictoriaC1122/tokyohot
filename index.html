@@ -53,6 +53,11 @@
             letter-spacing: 0.5px;
         }
 
+        /* GitHub 圖片基礎路徑 */
+        :root {
+            --github-images: 'https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/';
+        }
+
         /* 橫向導航 */
         nav {
             background-color: white;
@@ -221,49 +226,51 @@
 
         .timeline {
             position: relative;
-            padding-left: 40px;
-            margin: 25px 0;
+            padding-left: 50px;
+            margin: 30px 0;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 0;
+            left: 12px;
             top: 0;
             bottom: 0;
             width: 2px;
-            background-color: var(--border);
+            background-color: var(--accent);
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 28px;
+            padding-bottom: 0;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -50px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background-color: var(--accent);
+            left: -38px;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 3px solid var(--accent);
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px var(--accent);
+            box-shadow: 0 0 0 2px white;
         }
 
         .timeline-time {
             color: var(--primary);
             font-weight: 600;
-            font-size: 0.95em;
+            font-size: 1.1em;
+            margin-bottom: 8px;
         }
 
         .timeline-text {
             color: var(--text-light);
-            margin-top: 5px;
+            margin-top: 0;
             font-size: 0.95em;
+            line-height: 1.6;
         }
 
         .budget-table {
@@ -505,7 +512,7 @@
             <h2 style="visibility: hidden; height: 0; margin: 0; padding: 0;">6天5晚行程概覽</h2>
             <div class="day-overview-grid">
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day1-overview.jpg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day1-overview.jpg') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 1</div>
@@ -516,7 +523,7 @@
                 </div>
 
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day2-overview.jpg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day2-overview.jpg') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 2</div>
@@ -527,7 +534,7 @@
                 </div>
 
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day3-overview.jpg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day3-overview.jpg') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 3</div>
@@ -538,7 +545,7 @@
                 </div>
 
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day4-overview.webp') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day4-overview.webp') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 4</div>
@@ -549,7 +556,7 @@
                 </div>
 
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day5-overview.jpeg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day5-overview.jpeg') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 5</div>
@@ -560,7 +567,7 @@
                 </div>
 
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('day6-overview.jpg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day6-overview.jpg') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 6</div>
@@ -603,11 +610,31 @@
             </div>
 
             <div style="margin: 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <img src="paul-house.jpg" alt="HOTEL Paul House 客房" style="width: 100%; height: auto; display: block;">
+                <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/day1-overview.jpg" alt="HOTEL Paul House 客房" style="width: 100%; height: auto; display: block;">
             </div>
 
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">✈ 航班 & 桃機流程</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00</div>
+                    <div class="timeline-text">交通接送 → 桃園機場</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">12:20–12:30</div>
+                    <div class="timeline-text">抵達 → 進入星宇貴賓室（停留約 1.5–2 小時）</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-text">JX804 起飛</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-text">抵達成田機場 T2</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🌙 晚間散步 & 宵夜</h3>
             <div class="info-box">
-                <h3 style="color: var(--primary); margin-bottom: 15px;">🌙 晚間散步 & 宵夜</h3>
                 <p><strong>阿美橫町</strong> - 上野熱鬧商街，推薦小食：<br>
                 • 磯丸水產（24H 海鮮居酒屋）<br>
                 • 一蘭拉麵上野店<br>
@@ -641,7 +668,7 @@
                 </div>
             </div>
 
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">⏱ 每日行程表</h3>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">⏱ 每日行程表</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-time">09:00</div>
@@ -667,34 +694,17 @@
                     <div class="timeline-time">17:30 – 18:00</div>
                     <div class="timeline-text">秋葉原 ORIX 加油＆準時還車</div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30</div>
+                    <div class="timeline-text">粋な鮨 百万石（板前壽司晚餐）</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00 – 22:00</div>
+                    <div class="timeline-text">秋葉原 Night Mode（SEGA/GiGO、扭蛋街、Yodobashi）</div>
+                </div>
             </div>
 
-            <div class="info-box" style="margin-top: 30px;">
-                <h3 style="color: var(--primary); margin-bottom: 15px;">🍣 晚餐推薦</h3>
-                <p><strong>粋な鮨 百万石</strong><br>
-                正統板前壽司體驗<br>
-                18:30 開始用餐</p>
-            </div>
-
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🌃 秋葉原 Night Mode（20:00–22:00）</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>🎮 SEGA / GiGO</h4>
-                    <p>電玩娛樂中心</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🧸 扭蛋街</h4>
-                    <p>日本動漫周邊天堂</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>📱 Yodobashi Camera</h4>
-                    <p>大型電器商場</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🏮 電器街散策</h4>
-                    <p>秋葉原核心精華區</p>
-                </div>
-            </div>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🎯 富士山三大景點</h3>
         </div>
     </section>
 
@@ -702,15 +712,25 @@
         <div class="container">
             <h2>Day 3｜12月5日（五）和服 → 淺草 → 新宿</h2>
 
-            <div class="highlights">
-                <div class="highlight-item">
-                    <h3>👘 和服體驗套餐</h3>
-                    <p><strong>時間：11:30–14:00</strong><br>
-                    • 和服：¥13,000<br>
-                    • 彩妝：¥8,000<br>
-                    • 攝影（60分）：¥20,000<br>
-                    <span class="price-tag">合計 ¥41,000 = NT$8,200</span></p>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">👘 和服攝影時間表（11:30–14:00）</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">和服</div>
+                    <div class="timeline-text">¥13,000</div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">彩妝</div>
+                    <div class="timeline-text">¥8,000</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">攝影 60 分</div>
+                    <div class="timeline-text">¥20,000</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">合計</div>
+                    <div class="timeline-text">¥41,000 → NT$ 8,200</div>
+                </div>
+            </div>
 
                 <div class="highlight-item">
                     <h3>🏨 新宿住宿</h3>
@@ -731,27 +751,27 @@
             <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">👘 和服攝影風采</h3>
             <div class="image-gallery">
                 <div class="image-item">
-                    <img src="kimono-temple.jpg" alt="和服於淺草寺廟">
+                    <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/kimono-temple.jpg" alt="和服於淺草寺廟">
                 </div>
                 <div class="image-item">
-                    <img src="kimono-indoor.jpg" alt="和服室內定裝照">
+                    <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/kimono-indoor.jpg" alt="和服室內定裝照">
                 </div>
             </div>
 
             <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🏨 新宿王子大飯店</h3>
             <div style="margin: 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <img src="shinjuku-prince.jpg" alt="新宿王子大飯店 雙人房間 含早餐 兩張單人床 夜景" style="width: 100%; height: auto; display: block;">
+                <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/shinjuku-prince.jpg" alt="新宿王子大飯店 雙人房間 含早餐 兩張單人床 夜景" style="width: 100%; height: auto; display: block;">
             </div>
 
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🚃 淺草 → 新宿交通</h3>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">🚃 淺草 → 秋葉原 → 新宿完整行程</h3>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-time">14:00</div>
-                    <div class="timeline-text">和服體驗完成，於淺草開始散步</div>
-                </div>
-                <div class="timeline-item">
                     <div class="timeline-time">14:00 – 16:00</div>
-                    <div class="timeline-text">雷門拍美照 → 仲見世通買伴手禮 → 淺草寺參拜 → 文化觀光中心頂樓展望台（免費）</div>
+                    <div class="timeline-text"><strong>淺草散步</strong><br>
+                    • 雷門拍美照<br>
+                    • 仲見世通買小吃/伴手禮<br>
+                    • 淺草寺參拜<br>
+                    • 淺草文化觀光中心頂樓（免費展望台，拍雷門俯瞰）</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">16:00 – 16:30</div>
@@ -761,27 +781,17 @@
                     <div class="timeline-time">16:30 – 17:00</div>
                     <div class="timeline-text">秋葉原 → 新宿王子大飯店 Check in</div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00+</div>
+                    <div class="timeline-text"><strong>歌舞伎町夜生活</strong><br>
+                    • 歌舞伎町一番街拍照<br>
+                    • 花園神社（很美、很安全）<br>
+                    • 二丁目酒吧：Gold Finger（女生友善）<br>
+                    • 宵夜：拉麵（例如一蘭）</div>
+                </div>
             </div>
 
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🌙 歌舞伎町夜生活</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>📸 歌舞伎町一番街</h4>
-                    <p>霓虹夜景拍照聖地</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🏮 花園神社</h4>
-                    <p>安全且美麗的神社</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🍸 Gold Finger</h4>
-                    <p>二丁目友善酒吧</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🍜 一蘭拉麵</h4>
-                    <p>經典宵夜選擇</p>
-                </div>
-            </div>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🎯 淺草主要景點</h3>
         </div>
     </section>
 
@@ -789,93 +799,42 @@
         <div class="container">
             <h2>Day 4｜12月6日（六）澀谷 → 表參道 → 六本木 → 東京鐵塔</h2>
 
-            <h3 style="color: var(--primary); margin-bottom: 20px;">☀ 澀谷購物聖地</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>🏢 宮下公園</h4>
-                    <p>澀谷必訪購物地標</p>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">⏱ 完整行程時間表</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">上午</div>
+                    <div class="timeline-text"><strong>澀谷購物</strong><br>
+                    • 宮下公園<br>
+                    • PARCO<br>
+                    • SHIBUYA 109<br>
+                    • Donki</div>
                 </div>
-                <div class="restaurant-item">
-                    <h4>🏬 PARCO</h4>
-                    <p>時尚百貨大樓</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">下午</div>
+                    <div class="timeline-text"><strong>表參道下午茶</strong><br>
+                    • Blue Bottle 青山（最推！精品咖啡）<br>
+                    • Harbs、Cafe Kitsuné、%Arabica、A to Z Cafe</div>
                 </div>
-                <div class="restaurant-item">
-                    <h4>🏪 SHIBUYA 109</h4>
-                    <p>潮流文化殿堂</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">晚間</div>
+                    <div class="timeline-text"><strong>六本木夜遊</strong><br>
+                    • Roppongi Hills<br>
+                    • 森美術館<br>
+                    • Tokyo City View（夜景）<br>
+                    • 毛利庭園（夜景超美）<br>
+                    • Tokyo Midtown</div>
                 </div>
-                <div class="restaurant-item">
-                    <h4>🛍️ Donki</h4>
-                    <p>綜合購物廣場</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">晚間</div>
+                    <div class="timeline-text"><strong>東京鐵塔</strong><br>
+                    六本木 → 東京鐵塔 距離非常近<br>
+                    放在最後收掉夜景，完美順路</div>
                 </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">☕ 表參道下午茶推薦</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>☕ Blue Bottle 青山</h4>
-                    <p><strong>最推！</strong>精品咖啡</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🎂 Harbs</h4>
-                    <p>經典日式甜點</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>☕ Cafe Kitsuné</h4>
-                    <p>LVMH旗下咖啡廳</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>☕ %Arabica</h4>
-                    <p>大阪知名咖啡廳</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🌱 A to Z Cafe</h4>
-                    <p>輕鬆質感小店</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🛍️ Dior / A&F</h4>
-                    <p>頂級精品購物</p>
-                </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🌇 六本木夜遊（晚間必訪）</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>🏢 Roppongi Hills</h4>
-                    <p>複合商業區</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🎨 森美術館</h4>
-                    <p>當代藝術展覽</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🌃 Tokyo City View</h4>
-                    <p>360度夜景觀景台</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🌳 毛利庭園</h4>
-                    <p>超美夜景點綴</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🏢 Tokyo Midtown</h4>
-                    <p>高級商業複合體</p>
-                </div>
-            </div>
-
-            <div class="info-box" style="margin-top: 30px;">
-                <h3 style="color: var(--primary); margin-bottom: 15px;">🗼 東京鐵塔夜景完美路線</h3>
-                <p><strong>六本木 → 東京鐵塔 距離非常近（車程5-10分鐘）</strong><br>
-                建議：先遊覽六本木夜景，最後前往東京鐵塔收掉夜景拍照，完美順路！</p>
-            </div>
-
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🍸 新宿酒吧體驗（第二晚）</h3>
-            <div class="grid-2">
-                <div class="location-card">
-                    <h4>どん底 Donzoko</h4>
-                    <p style="color: var(--text-light); margin: 10px 0;">文青昭和風酒吧，懷舊日本情調，推薦品嚐地道居酒屋氛圍</p>
-                </div>
-                <div class="location-card">
-                    <h4>Bar Alur</h4>
-                    <p style="color: var(--text-light); margin: 10px 0;">輕鬆質感酒吧，提供高品質調酒，適合夜間微醺放鬆</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">夜間</div>
+                    <div class="timeline-text"><strong>新宿酒吧（第二晚）</strong><br>
+                    • どん底 Donzoko（文青昭和風）<br>
+                    • Bar Alur（輕鬆質感）</div>
                 </div>
             </div>
         </div>
@@ -885,68 +844,30 @@
         <div class="container">
             <h2>Day 5｜12月7日（日）銀座美食日</h2>
 
-            <div class="highlights">
-                <div class="highlight-item">
-                    <h3>🎌 行程變更說明</h3>
-                    <p>築地週日休市<br>
-                    ⟹ 改為銀座美食日<br>
-                    專注美食 & 購物體驗</p>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">⏱ 銀座美食日行程</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">中午</div>
+                    <div class="timeline-text"><strong>迴轉壽司午餐</strong><br>
+                    • 回し寿司 活（最推）<br>
+                    • すしざんまい<br>
+                    • 築地すし好</div>
                 </div>
-
-                <div class="highlight-item">
-                    <h3>🍣 午餐：迴轉壽司</h3>
-                    <p><strong>推薦排名：</strong><br>
-                    ① 回し寿司 活<br>
-                    ② すしざんまい<br>
-                    ③ 築地すし好</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">下午</div>
+                    <div class="timeline-text"><strong>銀座逛街</strong><br>
+                    • Uniqlo 12F、GU<br>
+                    • GINZA SIX、LOFT<br>
+                    • 無印良品旗艦、Apple 銀座<br>
+                    • 資生堂パーラー</div>
                 </div>
-
-                <div class="highlight-item">
-                    <h3>🦀 晚餐：螃蟹大餐</h3>
-                    <p><strong>精選推薦：</strong><br>
-                    かに本家 銀座店<br>
-                    北海道海鮮美食</p>
+                <div class="timeline-item">
+                    <div class="timeline-time">晚上</div>
+                    <div class="timeline-text"><strong>螃蟹料理大餐</strong><br>
+                    • かに本家 銀座店（札幌螃蟹本家）<br>
+                    • 北海道海鮮餐廳<br>
+                    • 築地しゃぶ辰（螃蟹火鍋）</div>
                 </div>
-            </div>
-
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🛍 銀座逛街亮點</h3>
-            <div class="restaurant-list">
-                <div class="restaurant-item">
-                    <h4>👕 Uniqlo 12F</h4>
-                    <p>旗艦店時尚服飾</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>👔 GU</h4>
-                    <p>平價時尚選擇</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🏬 GINZA SIX</h4>
-                    <p>頂級百貨購物</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🛍️ LOFT</h4>
-                    <p>生活雜貨天堂</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>📌 無印良品旗艦</h4>
-                    <p>極簡美學商品</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>🍎 Apple 銀座</h4>
-                    <p>科技產品展示廳</p>
-                </div>
-                <div class="restaurant-item">
-                    <h4>💄 資生堂パーラー</h4>
-                    <p>日本美妝傳奇店</p>
-                </div>
-            </div>
-
-            <div class="info-box" style="margin-top: 30px;">
-                <h3 style="color: var(--primary); margin-bottom: 15px;">🦀 螃蟹料理進階選擇</h3>
-                <p><strong>かに本家 銀座店</strong>（札幌螃蟹本家東京分店）<br>
-                北海道最道地海鮮美食<br><br>
-                <strong>築地しゃぶ辰</strong><br>
-                螃蟹火鍋專門店，最鮮美體驗</p>
             </div>
         </div>
     </section>
@@ -955,6 +876,7 @@
         <div class="container">
             <h2>Day 6｜12月8日（一）返台灣</h2>
 
+            <h3 style="color: var(--primary); margin-bottom: 30px; font-size: 1.3em;">🚌 返台灣行程時間表</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-time">08:00–09:00</div>
@@ -976,11 +898,11 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">13:45</div>
-                    <div class="timeline-text"><strong>JX801 成田出發</strong></div>
+                    <div class="timeline-text">JX801 成田出發</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-time">16:50</div>
-                    <div class="timeline-text"><strong>抵達台北桃園機場</strong></div>
+                    <div class="timeline-text">抵達台北桃園機場</div>
                 </div>
             </div>
 
