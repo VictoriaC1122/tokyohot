@@ -164,6 +164,18 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
+        .day-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            cursor: pointer;
+        }
+
+        .day-link:hover .day-card {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
         .day-card-image {
             width: 100%;
             height: 220px;
@@ -938,6 +950,7 @@
         <div class="container">
             <h2 style="visibility: hidden; height: 0; margin: 0; padding: 0;">6天5晚行程概覽</h2>
             <div class="day-overview-grid">
+                <a href="#day1" class="day-link">
                 <div class="day-card">
                     <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day1.jpg') center/cover no-repeat;">
                     </div>
@@ -948,7 +961,9 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">STARLUX Airline • HOTEL Paul House</p>
                     </div>
                 </div>
+                </a>
 
+                <a href="#day2" class="day-link">
                 <div class="day-card">
                     <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day2.jpg') center/cover no-repeat;">
                     </div>
@@ -959,7 +974,9 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">新倉山淺間公園 • 河口湖 • 壽司饗宴</p>
                     </div>
                 </div>
+                </a>
 
+                <a href="#day3" class="day-link">
                 <div class="day-card">
                     <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day3.JPG') center/cover no-repeat;">
                     </div>
@@ -970,7 +987,9 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">新宿王子大飯店 • 歌舞伎町夜生活</p>
                     </div>
                 </div>
+                </a>
 
+                <a href="#day4" class="day-link">
                 <div class="day-card">
                     <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day4.webp') center/cover no-repeat;">
                     </div>
@@ -981,9 +1000,11 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">東京鐵塔 • 頂級酒吧體驗</p>
                     </div>
                 </div>
+                </a>
 
+                <a href="#day5" class="day-link">
                 <div class="day-card">
-                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day5.jpeg') center/cover no-repeat;">
+                    <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day5.webp') center/cover no-repeat;">
                     </div>
                     <div class="day-card-content">
                         <div class="day-title">Day 5</div>
@@ -992,7 +1013,9 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">迴轉壽司 • 螃蟹大餐 • 銀座購物</p>
                     </div>
                 </div>
+                </a>
 
+                <a href="#day6" class="day-link">
                 <div class="day-card">
                     <div class="day-card-image" style="background: url('https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/Day6.jpg') center/cover no-repeat;">
                     </div>
@@ -1003,6 +1026,7 @@
                         <p style="margin-top: 10px; color: var(--text-light); font-size: 0.9em;">JX801 • 13:45 NRT → 16:50 TPE</p>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1092,7 +1116,44 @@
                 </div>
             </div>
 
-            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🎯 富士山三大景點</h3>
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">🎯 富士山三大景點介紹</h3>
+            
+            <div class="restaurant-list">
+                <div class="restaurant-item">
+                    <h4>🏔️ 新倉山淺間公園（忠靈塔）</h4>
+                    <p><strong>特色：</strong> 富士山與五重塔同框的經典明信片景點，以最佳富士山觀看角度聞名</p>
+                    <p><strong>亮點：</strong> 需要爬上 398 階樓梯到觀景台，沿途樓梯陡峭，但到達頂部絕對值得</p>
+                    <p><strong>季節推薦：</strong> 春季櫻花盛開或秋天楓紅與富士山相映襯</p>
+                    <p><strong>交通：</strong> 從下吉田站步行約 10 分鐘 | <strong>門票：</strong> 免費 | <strong>停留：</strong> 1-2 小時</p>
+                </div>
+
+                <div class="restaurant-item">
+                    <h4>💧 忍野八海</h4>
+                    <p><strong>特色：</strong> 富士山下的神秘湧水群，共有八座水池，經過地下熔岩過濾形成清澈美景</p>
+                    <p><strong>八座水池：</strong> 出口池、御釜池、底抜池、銚子池、湧池、濁池、鏡池、菖蒲池</p>
+                    <p><strong>⚠️ 避人潮建議：</strong> 白天中午時段人潮非常多，建議一早或傍晚前來會比較悠閒</p>
+                    <p><strong>交通：</strong> 搭山中湖周遊巴士至「忍野八海」| <strong>門票：</strong> 免費 | <strong>停留：</strong> 1-2 小時</p>
+                </div>
+
+                <div class="restaurant-item">
+                    <h4>🌲 河口湖・大石公園</h4>
+                    <p><strong>特色：</strong> 可以看到「倒富士」（逆富士）的美景，富士山倒影在湖面上的絕景</p>
+                    <p><strong>亮點：</strong> 公園內有咖啡館，天氣好時富士山清晰可見，是賞景和拍照的最佳地點</p>
+                    <p><strong>最佳時機：</strong> 清晨時段湖面平靜，最容易看到倒影（逆富士）</p>
+                    <p><strong>交通：</strong> 河口湖站周遊巴士 | <strong>門票：</strong> 免費進入 | <strong>停留：</strong> 30 分鐘-1 小時</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">💡 富士山拍照秘訣</h3>
+                <p>✓ <strong>最佳拍照時間：</strong> 早晨日出時分或黃昏時刻，光線最柔和<br><br>
+                ✓ <strong>避免人潮：</strong> 避免中午 11:00-15:00，特別是櫻花季和假日更要提早出門<br><br>
+                ✓ <strong>天氣依賴：</strong> 富士山經常被雲霧遮蔽，天晴時來訪最重要<br><br>
+                ✓ <strong>季節特色：</strong><br>
+                • 春季（3-4月）：櫻花 + 富士山<br>
+                • 秋季（10-11月）：紅葉 + 富士山<br>
+                • 冬季（12月起）：白雪富士山</p>
+            </div>
         </div>
     </section>
 
@@ -1152,9 +1213,6 @@
             <div class="image-gallery">
                 <div class="image-item">
                     <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/和服範例.JPG" alt="和服於淺草寺廟">
-                </div>
-                <div class="image-item">
-                    <img src="https://raw.githubusercontent.com/VictoriaC1122/tokyohot/main/和服範例.JPG" alt="和服室內定裝照">
                 </div>
             </div>
 
@@ -1366,22 +1424,37 @@
     </footer>
 
     <script>
+        function navigateToSection(targetId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-link').forEach(l => {
+                l.classList.remove('active');
+            });
+            
+            document.getElementById(targetId).classList.add('active');
+            const navLink = document.querySelector(`[data-target="${targetId}"]`);
+            if (navLink) {
+                navLink.classList.add('active');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                document.querySelectorAll('section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.querySelectorAll('.nav-link').forEach(l => {
-                    l.classList.remove('active');
-                });
-                
                 const targetId = this.getAttribute('data-target');
-                document.getElementById(targetId).classList.add('active');
-                this.classList.add('active');
-                
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                navigateToSection(targetId);
+            });
+        });
+
+        document.querySelectorAll('.day-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                const targetId = href.substring(1);
+                navigateToSection(targetId);
             });
         });
     </script>
