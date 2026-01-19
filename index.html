@@ -202,13 +202,6 @@
             background: linear-gradient(90deg, var(--accent) 0%, rgba(180, 168, 150, 0) 100%);
         }
 
-        .day-overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
         .day-card {
             background: white;
             border-radius: 12px;
@@ -261,13 +254,6 @@
             color: var(--text-light);
             font-size: 0.9em;
             margin-bottom: 20px;
-        }
-
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
         }
 
         .highlight-item {
@@ -426,13 +412,6 @@
             margin: 8px 0;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-
         .location-card {
             background: white;
             padding: 20px;
@@ -505,6 +484,93 @@
             border-bottom: none;
         }
 
+        .expense-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.95em;
+        }
+
+        .expense-table thead {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .expense-table th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .expense-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9em;
+        }
+
+        .expense-table tbody tr:hover {
+            background-color: var(--light-bg);
+        }
+
+        .expense-category {
+            background-color: #f5f3f0;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .expense-chart {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .expense-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .expense-card h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .expense-card .amount {
+            font-size: 1.4em;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .expense-card .percentage {
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e8e3da;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 4px;
+        }
+
         footer {
             background: linear-gradient(135deg, #8b9b9f 0%, #9b9b8f 100%);
             color: white;
@@ -553,10 +619,6 @@
                 letter-spacing: 0.3px;
             }
 
-            nav {
-                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            }
-
             nav ul {
                 padding: 0 12px;
             }
@@ -580,18 +642,9 @@
                 margin-bottom: 25px;
             }
 
-            h2::after {
-                width: 60px;
-                height: 2.5px;
-            }
-
             .day-overview-grid {
                 grid-template-columns: 1fr;
                 gap: 18px;
-            }
-
-            .day-card {
-                border-left: 4px solid var(--primary);
             }
 
             .day-card-image {
@@ -603,54 +656,13 @@
                 padding: 18px;
             }
 
-            .day-title {
-                font-size: 1.15em;
-                margin-bottom: 10px;
-            }
-
-            .day-date {
-                font-size: 0.8em;
-                margin-bottom: 12px;
-            }
-
-            .day-card:hover {
-                transform: translateY(-3px);
-            }
-
             .highlights {
                 grid-template-columns: 1fr;
                 gap: 15px;
-                margin: 20px 0;
-            }
-
-            .highlight-item {
-                padding: 18px;
-                border-left: 3px solid var(--accent);
-            }
-
-            .highlight-item h3 {
-                font-size: 1em;
-                margin-bottom: 10px;
-            }
-
-            .highlight-item p {
-                font-size: 0.9em;
-                line-height: 1.5;
             }
 
             .timeline {
                 padding-left: 42px;
-                margin: 20px 0;
-            }
-
-            .timeline::before {
-                left: 10px;
-                width: 1.5px;
-                top: 24px;
-            }
-
-            .timeline-item {
-                margin-bottom: 24px;
             }
 
             .timeline-item::before {
@@ -663,108 +675,48 @@
 
             .timeline-time {
                 font-size: 0.95em;
-                margin-bottom: 6px;
-                font-weight: 600;
             }
 
             .timeline-text {
                 font-size: 0.9em;
-                line-height: 1.5;
-                color: var(--text-light);
             }
 
             .image-gallery {
                 grid-template-columns: 1fr;
                 gap: 15px;
-                margin: 25px 0;
-            }
-
-            .image-item {
-                border-radius: 6px;
-                overflow: hidden;
             }
 
             .info-box {
                 padding: 18px;
-                border-left: 3px solid var(--accent);
-                margin: 25px 0;
-            }
-
-            .info-box h3 {
-                font-size: 1em;
-                margin-bottom: 12px;
-            }
-
-            .info-box p {
-                font-size: 0.9em;
-                line-height: 1.6;
             }
 
             .restaurant-list {
                 grid-template-columns: 1fr;
                 gap: 12px;
-                margin: 20px 0;
             }
 
-            .restaurant-item {
-                padding: 15px;
-                border-left: 3px solid var(--accent);
-                border-radius: 6px;
-            }
-
-            .restaurant-item h4 {
-                font-size: 1em;
-                margin-bottom: 8px;
-            }
-
-            .restaurant-item p {
-                font-size: 0.85em;
-            }
-
-            .location-card {
-                padding: 15px;
-                border-left: 3px solid var(--accent);
-                border-radius: 6px;
-            }
-
-            .location-card h4 {
-                font-size: 1em;
-                margin-bottom: 8px;
-            }
-
-            .location-card p {
-                font-size: 0.85em;
-            }
-
-            .grid-2 {
+            .expense-chart {
                 grid-template-columns: 1fr;
-                gap: 15px;
-                margin: 20px 0;
             }
 
-            .budget-table {
-                font-size: 0.9em;
-                margin: 20px 0;
-                box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            .budget-table,
+            .expense-table {
+                font-size: 0.85em;
             }
 
-            .budget-table th {
+            .budget-table th,
+            .expense-table th {
                 padding: 13px 12px;
-                font-size: 0.85em;
+                font-size: 0.8em;
             }
 
-            .budget-table td {
+            .budget-table td,
+            .expense-table td {
                 padding: 11px 12px;
-                font-size: 0.85em;
             }
 
             footer {
                 padding: 30px 15px;
-            }
-
-            footer p {
-                font-size: 0.95em;
-                margin: 8px 0;
             }
         }
 
@@ -780,16 +732,10 @@
             header h1 {
                 font-size: 1.6em;
                 margin-bottom: 5px;
-                letter-spacing: 0.5px;
             }
 
             header p {
                 font-size: 0.88em;
-                letter-spacing: 0;
-            }
-
-            nav ul {
-                padding: 0 8px;
             }
 
             nav a {
@@ -801,27 +747,9 @@
                 padding: 0 12px;
             }
 
-            section {
-                padding: 25px 0;
-            }
-
             h2 {
                 font-size: 1.4em;
                 margin-bottom: 18px;
-                letter-spacing: 0;
-            }
-
-            h2::after {
-                width: 50px;
-                height: 2px;
-            }
-
-            .day-overview-grid {
-                gap: 15px;
-            }
-
-            .day-card {
-                border-left: 3px solid var(--primary);
             }
 
             .day-card-image {
@@ -829,182 +757,19 @@
                 font-size: 2em;
             }
 
-            .day-card-content {
-                padding: 12px;
-            }
-
-            .day-title {
-                font-size: 1.05em;
-                margin-bottom: 8px;
-            }
-
-            .day-date {
+            .budget-table,
+            .expense-table {
                 font-size: 0.75em;
-                margin-bottom: 10px;
             }
 
-            .highlights {
-                gap: 12px;
-                margin: 15px 0;
-            }
-
-            .highlight-item {
-                padding: 14px;
-                border-left: 2.5px solid var(--accent);
-            }
-
-            .highlight-item h3 {
-                font-size: 0.95em;
-                margin-bottom: 8px;
-            }
-
-            .highlight-item p {
-                font-size: 0.8em;
-                line-height: 1.4;
-            }
-
-            .timeline {
-                padding-left: 38px;
-                margin: 15px 0;
-            }
-
-            .timeline-item {
-                margin-bottom: 20px;
-            }
-
-            .timeline-item::before {
-                left: -28px;
-                width: 14px;
-                height: 14px;
-                border-width: 2px;
-                top: 5px;
-            }
-
-            .timeline-time {
-                font-size: 0.85em;
-                margin-bottom: 4px;
-            }
-
-            .timeline-text {
-                font-size: 0.8em;
-                line-height: 1.4;
-            }
-
-            .image-gallery {
-                gap: 12px;
-                margin: 18px 0;
-            }
-
-            .info-box {
-                padding: 14px;
-                border-left: 2.5px solid var(--accent);
-                margin: 18px 0;
-            }
-
-            .info-box h3 {
-                font-size: 0.95em;
-                margin-bottom: 10px;
-            }
-
-            .info-box p {
-                font-size: 0.8em;
-                line-height: 1.5;
-            }
-
-            .restaurant-list {
-                gap: 10px;
-                margin: 15px 0;
-            }
-
-            .restaurant-item {
-                padding: 12px;
-            }
-
-            .restaurant-item h4 {
-                font-size: 0.95em;
-                margin-bottom: 6px;
-            }
-
-            .restaurant-item p {
-                font-size: 0.8em;
-            }
-
-            .location-card {
-                padding: 12px;
-            }
-
-            .location-card h4 {
-                font-size: 0.95em;
-                margin-bottom: 6px;
-            }
-
-            .location-card p {
-                font-size: 0.8em;
-            }
-
-            .grid-2 {
-                gap: 12px;
-                margin: 15px 0;
-            }
-
-            .budget-table {
-                font-size: 0.75em;
-                margin: 15px 0;
-            }
-
-            .budget-table th {
+            .budget-table th,
+            .expense-table th {
                 padding: 10px 8px;
-                font-size: 0.75em;
             }
 
-            .budget-table td {
+            .budget-table td,
+            .expense-table td {
                 padding: 8px 8px;
-                font-size: 0.75em;
-            }
-
-            footer {
-                padding: 25px 12px;
-            }
-
-            footer p {
-                font-size: 0.9em;
-                margin: 6px 0;
-            }
-        }
-
-        @media (max-width: 360px) {
-            header {
-                padding: 25px 12px;
-            }
-
-            header h1 {
-                font-size: 1.4em;
-            }
-
-            header p {
-                font-size: 0.8em;
-            }
-
-            nav a {
-                padding: 10px 8px;
-                font-size: 0.65em;
-            }
-
-            h2 {
-                font-size: 1.2em;
-                margin-bottom: 15px;
-            }
-
-            section {
-                padding: 20px 0;
-            }
-
-            .day-card-image {
-                height: 120px;
-            }
-
-            .budget-table {
-                font-size: 0.7em;
             }
         }
     </style>
@@ -1025,6 +790,7 @@
             <li><a href="#day5" class="nav-link" data-target="day5">Day 5</a></li>
             <li><a href="#day6" class="nav-link" data-target="day6">Day 6</a></li>
             <li><a href="#budget" class="nav-link" data-target="budget">Budget</a></li>
+            <li><a href="#expense" class="nav-link" data-target="expense">Expense</a></li>
         </ul>
     </nav>
 
@@ -1674,6 +1440,204 @@
                 • 緊湊預算：130,000 TWD（控制用餐，少購物）<br>
                 • 舒適預算：140,000 TWD（合理用餐，適度購物）<br>
                 • 寬裕預算：150,000 TWD（享受美食，盡情血拼）</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expense">
+        <div class="container">
+            <h2>💰 Victoria 實際花費明細</h2>
+
+            <div class="info-box" style="margin-bottom: 30px;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">📊 一人總花費概覽</h3>
+                <p><strong>旅行期間：</strong> 2025/12/03 – 12/08（6天5晚）<br>
+                <strong>一人總花費：</strong> <span style="color: #d4644d; font-size: 1.2em; font-weight: 600;">114,509 TWD</span><br>
+                <strong>每日平均：</strong> 19,085 TWD</p>
+            </div>
+
+            <h3 style="color: var(--primary); margin-top: 40px; margin-bottom: 30px; font-size: 1.3em;">📈 花費分類明細</h3>
+
+            <table class="expense-table">
+                <thead>
+                    <tr>
+                        <th>類別</th>
+                        <th style="text-align: right;">金額</th>
+                        <th style="text-align: right;">佔比</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="expense-category">✈️ 機票</td>
+                        <td style="text-align: right;" class="amount">15,020</td>
+                        <td style="text-align: right;">13.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">🏨 住宿</td>
+                        <td style="text-align: right;" class="amount">22,624</td>
+                        <td style="text-align: right;">19.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">👘 體驗</td>
+                        <td style="text-align: right;" class="amount">4,100</td>
+                        <td style="text-align: right;">3.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">🚕 交通</td>
+                        <td style="text-align: right;" class="amount">2,924</td>
+                        <td style="text-align: right;">2.6%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">🍽️ 餐飲</td>
+                        <td style="text-align: right;" class="amount">4,671</td>
+                        <td style="text-align: right;">4.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">🏪 便利商店</td>
+                        <td style="text-align: right;" class="amount">1,229</td>
+                        <td style="text-align: right;">1.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category" style="color: #d4644d;">🛍️ 購物</td>
+                        <td style="text-align: right; color: #d4644d; font-weight: 600;">62,703</td>
+                        <td style="text-align: right; color: #d4644d;">54.8%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">🚆 交通儲值</td>
+                        <td style="text-align: right;" class="amount">1,215</td>
+                        <td style="text-align: right;">1.1%</td>
+                    </tr>
+                    <tr>
+                        <td class="expense-category">💳 手續費</td>
+                        <td style="text-align: right;" class="amount">23</td>
+                        <td style="text-align: right;">0.0%</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>合計</strong></td>
+                        <td style="text-align: right;"><strong>114,509</strong></td>
+                        <td style="text-align: right;"><strong>100%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: var(--primary); margin-top: 50px; margin-bottom: 30px; font-size: 1.3em;">💎 花費排名 TOP 5</h3>
+
+            <div class="expense-chart">
+                <div class="expense-card">
+                    <h4>1️⃣ 購物</h4>
+                    <div class="amount">62,703 TWD</div>
+                    <div class="percentage">54.8% 的總花費</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                    <p style="font-size: 0.85em; color: var(--text-light); margin-top: 8px;">🛍️ UNIQLO、京王百貨、銀座購物區、機場免稅</p>
+                </div>
+
+                <div class="expense-card">
+                    <h4>2️⃣ 住宿</h4>
+                    <div class="amount">22,624 TWD</div>
+                    <div class="percentage">19.8% 的總花費</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 36%;"></div>
+                    </div>
+                    <p style="font-size: 0.85em; color: var(--text-light); margin-top: 8px;">🏨 上野 + 新宿王子大飯店</p>
+                </div>
+
+                <div class="expense-card">
+                    <h4>3️⃣ 機票</h4>
+                    <div class="amount">15,020 TWD</div>
+                    <div class="percentage">13.1% 的總花費</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 24%;"></div>
+                    </div>
+                    <p style="font-size: 0.85em; color: var(--text-light); margin-top: 8px;">✈️ 星宇航空 + 選位</p>
+                </div>
+
+                <div class="expense-card">
+                    <h4>4️⃣ 餐飲</h4>
+                    <div class="amount">4,671 TWD</div>
+                    <div class="percentage">4.1% 的總花費</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 7%;"></div>
+                    </div>
+                    <p style="font-size: 0.85em; color: var(--text-light); margin-top: 8px;">🍽️ 餐廳用餐記錄</p>
+                </div>
+
+                <div class="expense-card">
+                    <h4>5️⃣ 體驗</h4>
+                    <div class="amount">4,100 TWD</div>
+                    <div class="percentage">3.6% 的總花費</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 6.5%;"></div>
+                    </div>
+                    <p style="font-size: 0.85em; color: var(--text-light); margin-top: 8px;">👘 和服 + 攝影體驗</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary); margin-top: 50px; margin-bottom: 30px; font-size: 1.3em;">📅 按日期分類花費</h3>
+
+            <table class="expense-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th style="text-align: left;">主要活動</th>
+                        <th style="text-align: right;">花費</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Day 1</strong><br>12/03（三）</td>
+                        <td>台北 → 東京 → 上野</td>
+                        <td style="text-align: right;" class="amount">20,475.5 TWD</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 2</strong><br>12/04（四）</td>
+                        <td>富士山自駕 → 秋葉原</td>
+                        <td style="text-align: right;">2,744+ TBD</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 3</strong><br>12/05（五）</td>
+                        <td>和服 + 淺草 + 新宿</td>
+                        <td style="text-align: right;" class="amount">25,152.5 TWD</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 4</strong><br>12/06（六）</td>
+                        <td>澀谷 → Shibuya Sky → 表參道</td>
+                        <td style="text-align: right;" class="amount">29,230 TWD</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 5</strong><br>12/07（日）</td>
+                        <td>銀座 → 六本木 → 東京鐵塔</td>
+                        <td style="text-align: right;" class="amount">17,300.5 TWD</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 6</strong><br>12/08（一）</td>
+                        <td>返台灣</td>
+                        <td style="text-align: right;" class="amount">18,604.5 TWD</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="color: var(--primary); margin-top: 50px; margin-bottom: 30px; font-size: 1.3em;">🎯 花費分析 & 超支說明</h3>
+
+            <div class="info-box" style="background-color: #fff5f0; border-left-color: #d4644d;">
+                <h3 style="color: #d4644d; margin-bottom: 15px;">📊 預計 vs 實際</h3>
+                <p><strong>預計預算（旅前）：</strong> 65,000-75,000 TWD/人<br>
+                <strong>實際花費（旅後）：</strong> 114,509 TWD<br>
+                <strong>超支金額：</strong> 約 39,509-49,509 TWD<br><br>
+                <strong>超支主因分析：</strong><br>
+                • 🛍️ 購物支出：62,703 TWD（預計應為 15,000 TWD，超支 4 倍多！）<br>
+                • 🏨 住宿選擇：優質五星飯店升級<br>
+                • 🍽️ 用餐體驗：高品質海鮮餐廳<br>
+                • ✨ 體驗豐富：和服攝影、景點遊覽</p>
+            </div>
+
+            <div class="info-box" style="background-color: #f0f5ff; border-left-color: #8b9b9f;">
+                <h3 style="color: var(--primary); margin-bottom: 15px;">✨ 整體評價</h3>
+                <p><strong>旅程類型：</strong> 奢華美食 + 血拼購物型<br>
+                <strong>行程充實度：</strong> ⭐⭐⭐⭐⭐ (5/5)<br>
+                <strong>體驗質感度：</strong> ⭐⭐⭐⭐⭐ (5/5)<br>
+                <strong>花費超值度：</strong> ⭐⭐⭐⭐☆ (4/5)<br><br>
+                這次東京之旅是一場奢華的藝術之旅，充滿了精緻的餐飲體驗、優質的住宿環境、難忘的文化體驗與盡情的購物時光。雖然花費超預算，但每一筆投資都化為珍貴的回憶和高質感的體驗！✨</p>
             </div>
         </div>
     </section>
