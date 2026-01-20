@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>東京之旅 12/3–12/8</title>
@@ -14,6 +14,10 @@
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         html, body {
@@ -134,12 +138,20 @@
             text-align: center;
         }
 
+        nav a:hover {
+            background: linear-gradient(180deg, rgba(123, 141, 145, 0.05), transparent);
+            color: var(--primary);
+        }
+
         nav a:active {
             background: linear-gradient(180deg, rgba(123, 141, 145, 0.05), transparent);
             color: var(--primary);
         }
 
-        nav a.active {
+        /* 高亮當前頁面 */
+        nav a[href*="#overview"]:target,
+        section:target ~ nav a[href*="#overview"],
+        nav a:not([href*="#"]):first-child {
             background: linear-gradient(180deg, rgba(123, 141, 145, 0.08), transparent);
             color: var(--primary);
             border-bottom: 3px solid var(--secondary);
@@ -155,15 +167,13 @@
 
         section {
             padding: 40px 0;
-            display: none;
         }
 
-        section.active {
-            display: block;
-            animation: fadeIn 0.4s ease-in-out;
+        section:target {
+            animation: sectionFadeIn 0.3s ease-out;
         }
 
-        @keyframes fadeIn {
+        @keyframes sectionFadeIn {
             from {
                 opacity: 0;
                 transform: translateY(10px);
@@ -232,6 +242,7 @@
         .day-card:active {
             transform: scale(0.98);
             box-shadow: 0 8px 24px rgba(123, 141, 145, 0.16);
+            will-change: transform;
         }
 
         .day-link {
@@ -729,19 +740,19 @@
 
     <nav>
         <ul>
-            <li><a href="#overview" class="nav-link active" data-target="overview">Overview</a></li>
-            <li><a href="#day1" class="nav-link" data-target="day1">Day 1</a></li>
-            <li><a href="#day2" class="nav-link" data-target="day2">Day 2</a></li>
-            <li><a href="#day3" class="nav-link" data-target="day3">Day 3</a></li>
-            <li><a href="#day4" class="nav-link" data-target="day4">Day 4</a></li>
-            <li><a href="#day5" class="nav-link" data-target="day5">Day 5</a></li>
-            <li><a href="#day6" class="nav-link" data-target="day6">Day 6</a></li>
-            <li><a href="#budget" class="nav-link" data-target="budget">Budget</a></li>
-            <li><a href="#expense" class="nav-link" data-target="expense">💰</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#day1">Day 1</a></li>
+            <li><a href="#day2">Day 2</a></li>
+            <li><a href="#day3">Day 3</a></li>
+            <li><a href="#day4">Day 4</a></li>
+            <li><a href="#day5">Day 5</a></li>
+            <li><a href="#day6">Day 6</a></li>
+            <li><a href="#budget">Budget</a></li>
+            <li><a href="#expense">💰</a></li>
         </ul>
     </nav>
 
-    <section id="overview" class="active">
+    <section id="overview">
         <div class="container">
             <div class="day-overview-grid">
                 <a href="#day1" class="day-link">
@@ -1364,52 +1375,6 @@
         <p>東京之旅｜12月3日–12月8日</p>
         <p>&copy; 2025 Victoria</p>
     </footer>
-
-    <script>
-        function navigateToSection(targetId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.querySelectorAll('.nav-link').forEach(l => {
-                l.classList.remove('active');
-            });
-            
-            document.getElementById(targetId).classList.add('active');
-            const navLink = document.querySelector(`[data-target="${targetId}"]`);
-            if (navLink) {
-                navLink.classList.add('active');
-            }
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('data-target');
-                navigateToSection(targetId);
-            });
-        });
-
-        document.querySelectorAll('.day-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                const targetId = href.substring(1);
-                navigateToSection(targetId);
-            });
-        });
-
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(e) {
-            if (e.touches.length === 0) {
-                if (lastTouchEnd - e.timeStamp < 300) {
-                    e.preventDefault();
-                }
-                lastTouchEnd = e.timeStamp;
-            }
-        }, false);
-    </script>
 
 </body>
 </html>
